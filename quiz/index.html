@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="barzan py-3 text-center bg-white">
+        <div class="container">
+            <h2 class="text-primary display-3">Barzan Quiz</h2>
+        </div>
+    </div>
+
+    <div class="result py-4 d-none bg-light text-center">
+        <div class="container lead">
+            <p>you are <span class="text-primary display-4 p-3">0%</span>barzan</p>
+        </div>
+    </div>
+    <div class="best emo d-none text-center bg-light">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-sunglasses" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+           <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM6.5 6.497V6.5h-1c0-.568.447-.947.862-1.154C6.807 5.123 7.387 5 8 5s1.193.123 1.638.346c.415.207.862.586.862 1.154h-1v-.003l-.003-.01a.213.213 0 0 0-.036-.053.86.86 0 0 0-.27-.194C8.91 6.1 8.49 6 8 6c-.491 0-.912.1-1.19.24a.86.86 0 0 0-.271.194.213.213 0 0 0-.036.054l-.003.01z"/>
+           <path d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z"/>
+        </svg>
+    </div>
+
+    <div class="good emo d-none text-center bg-light">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+           <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"/>
+           <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+        </svg>
+    </div> 
+    <div class="mid emo d-none text-center bg-light">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-neutral" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
+            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+        </svg>
+    </div>
+    <div class="sad emo d-none text-center bg-light">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-frown" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683z"/>
+            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+        </svg>
+    </div>
+    <div class="dead emo d-none text-center bg-light">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-dizzy" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path fill-rule="evenodd" d="M9.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm-5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708z"/>
+            <path d="M10 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+        </svg>
+    </div>
+
+
+    <div class="quiz py-4 bg-primary">
+        <div class="container">
+            <h2 class="my-5 text-white">questions 1:</h2>
+            <form action="" class="quiz-form text-light">
+                <div class="my-5">
+                    <p class="lead font-weight-normal">how are you ?</p>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q1" value="A" checked>
+                        <label class="form-check-label">show a map</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q1" value="B" checked>
+                        <label class="form-check-label">show b map</label>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <p class="lead font-weight-normal">Lorem ipsum dolor g . Dicta ratione</p>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q2" value="A" checked>
+                        <label class="form-check-label">A</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q2" value="B" checked>
+                        <label class="form-check-label">B</label>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <p class="lead font-weight-normal">what's your name ?</p>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q3" value="A" checked>
+                        <label class="form-check-label">barzan</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q3" value="B" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <p class="lead font-weight-normal">where are you ?</p>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q4" value="A" checked>
+                        <label class="form-check-label">heart</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q4" value="B" checked>
+                        <label class="form-check-label">house</label>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <p class="lead font-weight-normal">what's your name ?</p>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q5" value="A" checked>
+                        <label class="form-check-label">barzan</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q5" value="B" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q5" value="C" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q5" value="D" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <p class="lead font-weight-normal">what's your name ?</p>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q6" value="A" checked>
+                        <label class="form-check-label">barzan</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q6" value="B" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q6" value="C" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                    <div class="form-check py-2 text-white-50">
+                        <input type="radio" name="q6" value="D" checked>
+                        <label class="form-check-label">karo</label>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-light" value="submit">
+            </form>
+        </div>
+    </div>
+    <script src="js/sandbox.js"></script>
+</body>
+</html>
+
+
+
+  
+
+  
+
+  
+
+  

@@ -1,0 +1,18 @@
+.emo{
+    font-size: 69px;
+}
+.best{
+    color: green;
+}
+.good{
+    color: #007BFF;
+}
+.mid{
+    color: rgb(209, 209, 12);
+}
+.sad{
+    color: brown;
+}
+.dead{
+    color: crimson;
+}
